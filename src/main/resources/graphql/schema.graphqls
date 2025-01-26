@@ -1,0 +1,69 @@
+type Query {
+    orderById(id: ID): Order
+    ordersByBotId(botId: String): [Order]
+    tradeById(id: ID): Trade
+    tradesByOrderId(orderId: String): [Trade]
+}
+
+type Mutation {
+    createOrder(
+        exchange: String
+        baseAsset: String
+        quoteAsset: String
+        botId: String
+        strategy: String
+        type: String
+        side: String
+        amount: Float
+        price: Float
+        exchangeId: String
+    ): Order
+    cancelOrder(id: String): Order
+    createTrade(
+        exchange: String
+        baseAsset: String
+        quoteAsset: String
+        botId: String
+        strategy: String
+        side: String
+        amount: Float
+        price: Float
+        fee: String
+        orderId: String
+        exchangeId: String
+    ): Trade
+}
+
+type Order {
+    id: ID
+    exchange: String
+    baseAsset: String
+    quoteAsset: String
+    botId: String
+    strategy: String
+    creationTimestamp: Float
+    type: String
+    side: String
+    amount: Float
+    price: Float
+    lastStatus: String
+    lastUpdateTimestamp: Float
+    exchangeId: String
+    trades: [Trade]
+}
+
+type Trade {
+    id: ID
+    exchange: String
+    baseAsset: String
+    quoteAsset: String
+    botId: String
+    strategy: String
+    timestamp: Float
+    side: String
+    amount: Float
+    price: Float
+    fee: String
+    orderId: String
+    exchangeId: String
+}
