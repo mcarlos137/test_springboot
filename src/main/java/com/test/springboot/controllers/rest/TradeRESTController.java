@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.controllers.rest;
+package com.test.springboot.controllers.rest;
 
 import java.net.URI;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.silkrivercapital.springboot.entities.Trade;
-import com.silkrivercapital.springboot.services.TradeService;
+import com.test.springboot.entities.Trade;
+import com.test.springboot.services.TradeService;
 
 @RestController
 @RequestMapping("/trades")

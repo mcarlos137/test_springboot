@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.listeners;
+package com.test.springboot.listeners;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,10 +11,10 @@ import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.silkrivercapital.springboot.components.RedisHashMapping;
-import com.silkrivercapital.springboot.enums.RedisChannelTopic;
-import com.silkrivercapital.springboot.pojos.OrderBook;
-import com.silkrivercapital.springboot.pojos.OrderBookTransformationBasic;
+import com.test.springboot.components.RedisHashMapping;
+import com.test.springboot.enums.RedisChannelTopic;
+import com.test.springboot.pojos.OrderBook;
+import com.test.springboot.pojos.OrderBookTransformationBasic;
 
 public class RedisOrderBookTransformationBasicListener implements MessageListener {
 

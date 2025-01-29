@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.configs;
+package com.test.springboot.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
     }
 
     @Bean
-    public com.silkrivercapital.springboot.listeners.WebsocketListener orderBookHandler() {
-        return new com.silkrivercapital.springboot.listeners.WebsocketListener();
+    public com.test.springboot.listeners.WebsocketListener orderBookHandler() {
+        return new com.test.springboot.listeners.WebsocketListener();
     }
 }

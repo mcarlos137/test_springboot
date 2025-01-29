@@ -1,11 +1,11 @@
-package com.silkrivercapital.springboot.repositories;
+package com.test.springboot.repositories;
 
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import com.silkrivercapital.springboot.entities.Order;
-import com.silkrivercapital.springboot.enums.OrderStatus;
+import com.test.springboot.entities.Order;
+import com.test.springboot.enums.OrderStatus;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityNotFoundException;

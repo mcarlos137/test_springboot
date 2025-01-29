@@ -1,9 +1,9 @@
-package com.silkrivercapital.springboot.repositories;
+package com.test.springboot.repositories;
 
 import java.util.Date;
 import java.util.List;
 
-import com.silkrivercapital.springboot.entities.Trade;
+import com.test.springboot.entities.Trade;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

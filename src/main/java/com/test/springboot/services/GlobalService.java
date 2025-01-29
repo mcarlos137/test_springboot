@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.services;
+package com.test.springboot.services;
 
 import java.util.Set;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.silkrivercapital.springboot.components.Global;
-import com.silkrivercapital.springboot.pojos.OrderBook;
+import com.test.springboot.components.Global;
+import com.test.springboot.pojos.OrderBook;
 
 @Service
 public class GlobalService {

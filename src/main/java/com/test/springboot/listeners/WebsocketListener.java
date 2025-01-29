@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.listeners;
+package com.test.springboot.listeners;
 
 import java.io.IOException;
 import org.json.JSONObject;
@@ -8,7 +8,7 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import com.silkrivercapital.springboot.services.WebSocketSessionService;
+import com.test.springboot.services.WebSocketSessionService;
 
 public class WebsocketListener extends TextWebSocketHandler {
 

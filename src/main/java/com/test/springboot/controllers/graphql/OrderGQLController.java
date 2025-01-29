@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.controllers.graphql;
+package com.test.springboot.controllers.graphql;
 
 import java.util.List;
 import java.util.UUID;
@@ -10,12 +10,12 @@ import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
-import com.silkrivercapital.springboot.entities.Order;
-import com.silkrivercapital.springboot.entities.Trade;
-import com.silkrivercapital.springboot.enums.OrderSide;
-import com.silkrivercapital.springboot.enums.OrderType;
-import com.silkrivercapital.springboot.services.OrderService;
-import com.silkrivercapital.springboot.services.TradeService;
+import com.test.springboot.entities.Order;
+import com.test.springboot.entities.Trade;
+import com.test.springboot.enums.OrderSide;
+import com.test.springboot.enums.OrderType;
+import com.test.springboot.services.OrderService;
+import com.test.springboot.services.TradeService;
 
 @Controller
 public class OrderGQLController {

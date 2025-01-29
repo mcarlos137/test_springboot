@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.configs;
+package com.test.springboot.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

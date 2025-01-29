@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.configs;
+package com.test.springboot.configs;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -18,8 +18,8 @@ import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.stream.StreamMessageListenerContainer;
 import org.springframework.data.redis.stream.StreamMessageListenerContainer.StreamMessageListenerContainerOptions;
 
-import com.silkrivercapital.springboot.listeners.RedisOrderBookTransformationBasicListener;
-import com.silkrivercapital.springboot.listeners.RedisStreamOrderBookListener;
+import com.test.springboot.listeners.RedisOrderBookTransformationBasicListener;
+import com.test.springboot.listeners.RedisStreamOrderBookListener;
 
 @Configuration
 @EnableCaching

@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.enums;
+package com.test.springboot.enums;
 
 public enum RabbitmqQueue {
 

@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.services;
+package com.test.springboot.services;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.silkrivercapital.springboot.entities.Trade;
-import com.silkrivercapital.springboot.repositories.TradeRepositoryImpl;
+import com.test.springboot.entities.Trade;
+import com.test.springboot.repositories.TradeRepositoryImpl;
 
 @Service
 public class TradeService {

@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.events;
+package com.test.springboot.events;
 
 import org.springframework.context.ApplicationEvent;
 

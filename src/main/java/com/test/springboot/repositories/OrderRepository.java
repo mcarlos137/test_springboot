@@ -1,10 +1,10 @@
-package com.silkrivercapital.springboot.repositories;
+package com.test.springboot.repositories;
 
 import java.util.UUID;
 
 import org.springframework.data.repository.Repository;
 
-import com.silkrivercapital.springboot.entities.Order;
+import com.test.springboot.entities.Order;
 
 public interface OrderRepository extends Repository<Order, UUID>, OrderRepositoryCustom {
 

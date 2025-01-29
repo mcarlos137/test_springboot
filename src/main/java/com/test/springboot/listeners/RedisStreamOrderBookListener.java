@@ -1,9 +1,9 @@
-package com.silkrivercapital.springboot.listeners;
+package com.test.springboot.listeners;
 
 import org.springframework.data.redis.connection.stream.MapRecord;
 import org.springframework.data.redis.stream.StreamListener;
 
-import com.silkrivercapital.springboot.enums.RedisStreamKey;
+import com.test.springboot.enums.RedisStreamKey;
 
 public class RedisStreamOrderBookListener implements StreamListener<String, MapRecord<String, String, String>> {
 

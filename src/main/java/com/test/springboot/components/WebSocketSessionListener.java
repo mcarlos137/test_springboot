@@ -1,12 +1,12 @@
-package com.silkrivercapital.springboot.components;
+package com.test.springboot.components;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.silkrivercapital.springboot.events.WebSocketSessionSubscribeEvent;
-import com.silkrivercapital.springboot.events.WebSocketSessionUnsubscribeEvent;
-import com.silkrivercapital.springboot.services.GlobalService;
+import com.test.springboot.events.WebSocketSessionSubscribeEvent;
+import com.test.springboot.events.WebSocketSessionUnsubscribeEvent;
+import com.test.springboot.services.GlobalService;
 
 @Component
 public class WebSocketSessionListener {

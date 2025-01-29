@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.controllers.rest;
+package com.test.springboot.controllers.rest;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.silkrivercapital.springboot.enums.RedisStreamKey;
+import com.test.springboot.enums.RedisStreamKey;
 
 @RestController
 @RequestMapping("/orderBooks")

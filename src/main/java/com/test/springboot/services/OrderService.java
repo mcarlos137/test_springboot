@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.services;
+package com.test.springboot.services;
 
 import java.util.List;
 import java.util.UUID;
@@ -8,8 +8,8 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.silkrivercapital.springboot.entities.Order;
-import com.silkrivercapital.springboot.repositories.OrderRepositoryImpl;
+import com.test.springboot.entities.Order;
+import com.test.springboot.repositories.OrderRepositoryImpl;
 
 @Service
 public class OrderService {

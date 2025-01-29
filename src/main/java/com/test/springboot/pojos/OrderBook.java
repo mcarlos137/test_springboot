@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.pojos;
+package com.test.springboot.pojos;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;

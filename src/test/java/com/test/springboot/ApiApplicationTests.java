@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot;
+package com.test.springboot;
 
 //import org.junit.jupiter.springboot.Test;
 //import org.springframework.boot.test.context.SpringBootTest;

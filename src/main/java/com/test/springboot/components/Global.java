@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.components;
+package com.test.springboot.components;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.silkrivercapital.springboot.events.OrderBookWebsocketSyncEvent;
-import com.silkrivercapital.springboot.pojos.OrderBook;
+import com.test.springboot.events.OrderBookWebsocketSyncEvent;
+import com.test.springboot.pojos.OrderBook;
 
 @ApplicationScope
 @Component

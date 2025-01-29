@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.components;
+package com.test.springboot.components;
 
 import java.util.Map;
 

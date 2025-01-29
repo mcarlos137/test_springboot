@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.components;
+package com.test.springboot.components;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -7,10 +7,10 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.silkrivercapital.springboot.enums.RedisChannelTopic;
-import com.silkrivercapital.springboot.enums.RedisStreamKey;
-import com.silkrivercapital.springboot.events.OrderBookGlobalSyncEvent;
-import com.silkrivercapital.springboot.pojos.OrderBook;
+import com.test.springboot.enums.RedisChannelTopic;
+import com.test.springboot.enums.RedisStreamKey;
+import com.test.springboot.events.OrderBookGlobalSyncEvent;
+import com.test.springboot.pojos.OrderBook;
 
 @Component
 public class RabbitmqReceiver {

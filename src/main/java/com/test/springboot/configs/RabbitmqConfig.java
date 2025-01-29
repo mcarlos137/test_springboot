@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.configs;
+package com.test.springboot.configs;
 
 
 import org.springframework.amqp.core.Binding;
@@ -11,8 +11,8 @@ import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.silkrivercapital.springboot.components.RabbitmqReceiver;
-import com.silkrivercapital.springboot.enums.RabbitmqQueue;
+import com.test.springboot.components.RabbitmqReceiver;
+import com.test.springboot.enums.RabbitmqQueue;
 
 @Configuration
 public class RabbitmqConfig {

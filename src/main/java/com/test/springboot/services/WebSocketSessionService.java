@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.services;
+package com.test.springboot.services;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.silkrivercapital.springboot.events.WebSocketSessionSubscribeEvent;
-import com.silkrivercapital.springboot.events.WebSocketSessionUnsubscribeEvent;
+import com.test.springboot.events.WebSocketSessionSubscribeEvent;
+import com.test.springboot.events.WebSocketSessionUnsubscribeEvent;
 
 @Service
 public class WebSocketSessionService {

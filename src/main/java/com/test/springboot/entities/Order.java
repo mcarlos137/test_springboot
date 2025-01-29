@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.entities;
+package com.test.springboot.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,9 +7,9 @@ import java.util.UUID;
 import org.hibernate.annotations.UuidGenerator;
 import org.json.JSONObject;
 
-import com.silkrivercapital.springboot.enums.OrderSide;
-import com.silkrivercapital.springboot.enums.OrderStatus;
-import com.silkrivercapital.springboot.enums.OrderType;
+import com.test.springboot.enums.OrderSide;
+import com.test.springboot.enums.OrderStatus;
+import com.test.springboot.enums.OrderType;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,14 +19,14 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "orders", indexes = {
-        @Index(columnList = "id"),
-        @Index(columnList = "strategy"),
-        @Index(name = "exchange_exchangeId", columnList = "exchange, exchange_id", unique = true),
-        @Index(name = "exchange_creationTimestampDesc", columnList = "exchange, creation_timestamp DESC"),
-        @Index(name = "botId_creationTimestampDesc", columnList = "botId, creation_timestamp DESC"),
-        @Index(name = "exchange_type", columnList = "exchange, type"),
-        @Index(name = "exchange_lastStatus", columnList = "exchange, lastStatus"),
-        @Index(name = "exchange_lastStatus_creationTimestampDesc", columnList = "exchange, lastStatus, creation_timestamp DESC")
+        @Index(name = "orders_id", columnList = "id"),
+        @Index(name = "orders_strategy", columnList = "strategy"),
+        @Index(name = "orders_exchange_exchangeId", columnList = "exchange, exchange_id", unique = true),
+        @Index(name = "orders_exchange_creationTimestampDesc", columnList = "exchange, creation_timestamp DESC"),
+        @Index(name = "orders_botId_creationTimestampDesc", columnList = "botId, creation_timestamp DESC"),
+        @Index(name = "orders_exchange_type", columnList = "exchange, type"),
+        @Index(name = "orders_exchange_lastStatus", columnList = "exchange, lastStatus"),
+        @Index(name = "orders_exchange_lastStatus_creationTimestampDesc", columnList = "exchange, lastStatus, creation_timestamp DESC")
 })
 public class Order implements Serializable {
 

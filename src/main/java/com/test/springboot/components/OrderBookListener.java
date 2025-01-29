@@ -1,4 +1,4 @@
-package com.silkrivercapital.springboot.components;
+package com.test.springboot.components;
 
 import java.io.IOException;
 
@@ -7,10 +7,10 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.silkrivercapital.springboot.events.OrderBookWebsocketSyncEvent;
-import com.silkrivercapital.springboot.events.OrderBookGlobalSyncEvent;
-import com.silkrivercapital.springboot.services.GlobalService;
-import com.silkrivercapital.springboot.services.WebSocketSessionService;
+import com.test.springboot.events.OrderBookWebsocketSyncEvent;
+import com.test.springboot.events.OrderBookGlobalSyncEvent;
+import com.test.springboot.services.GlobalService;
+import com.test.springboot.services.WebSocketSessionService;
 
 @Component
 public class OrderBookListener {

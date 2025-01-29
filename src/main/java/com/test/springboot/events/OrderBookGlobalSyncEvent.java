@@ -1,8 +1,8 @@
-package com.silkrivercapital.springboot.events;
+package com.test.springboot.events;
 
 import org.springframework.context.ApplicationEvent;
 
-import com.silkrivercapital.springboot.pojos.OrderBook;
+import com.test.springboot.pojos.OrderBook;
 
 public class OrderBookGlobalSyncEvent extends ApplicationEvent {
     

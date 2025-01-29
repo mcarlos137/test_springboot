@@ -1,28 +1,31 @@
-package com.silkrivercapital.springboot.entities;
+package com.test.springboot.entities;
 
 import java.io.Serializable;
 
-import com.silkrivercapital.springboot.enums.TradeSide;
+import com.test.springboot.enums.TradeSide;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Index;
+import jakarta.persistence.SequenceGenerator;
 
 @Entity
 @Table(name = "trades", indexes = {
-        @Index(columnList = "id"),
-        @Index(columnList = "strategy"),
-        @Index(name = "exchange_exchangeId", columnList = "exchange, exchangeId", unique = true),
-        @Index(name = "exchange_timestampDesc", columnList = "exchange, timestamp DESC"),
-        @Index(name = "botId_timestampDesc", columnList = "botId, timestamp DESC")
+        @Index(name = "trades_id", columnList = "id"),
+        @Index(name = "trades_strategy", columnList = "strategy"),
+        @Index(name = "trades_exchange_exchangeId", columnList = "exchange, exchange_id", unique = true),
+        @Index(name = "trades_exchange_timestampDesc", columnList = "exchange, timestamp DESC"),
+        @Index(name = "trades_botId_timestampDesc", columnList = "bot_id, timestamp DESC")
 })
 public class Trade implements Serializable {
 
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name="trades_seq", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "trades_seq")
     private Integer id;
     @Column(nullable = false)
     private String botId;
@@ -48,7 +51,7 @@ public class Trade implements Serializable {
     private String exchangeId;
     @Column(nullable = false)
     private String exchange;
-    
+
     public Trade() {
     }
 
