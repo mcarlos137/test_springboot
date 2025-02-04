@@ -38,7 +38,7 @@ public class RedisOrderBookTransformationBasicListener implements MessageListene
 
         orderBookTransformationRedisHashMapping.write(orderBook.getTime().toString(), new OrderBookTransformationBasic(orderBook));
 
-        File dataFolder = new File(new File(System.getProperty("user.dir")).getParentFile(), "data");
+        File dataFolder = new File(new File(System.getProperty("user.dir")).getParentFile().getParentFile().getParentFile(), "data");
         File orderBookTransformationBasicFolder = new File(dataFolder, "orderBookTransformationBasic");
         if (!orderBookTransformationBasicFolder.exists()) {
             orderBookTransformationBasicFolder.mkdir();

@@ -21,7 +21,7 @@ public class RabbitmqReceiver {
   private ApplicationEventPublisher eventPublisher;
 
   @Autowired
-  private RedisPublisher redisPublisher;
+  private RedisPubSub redisPubSub;
 
   @Autowired
   private RedisStreamSender redisStreamSender;
@@ -35,8 +35,11 @@ public class RabbitmqReceiver {
       System.out.println("Message is not an order book -> " + orderBookmessage);
       return;
     }
+    // Local Event
     eventPublisher.publishEvent(new OrderBookGlobalSyncEvent(this, "public", orderBook));
-    redisPublisher.publish(RedisChannelTopic.ORDER_BOOK_TRANSFORMATION_BASIC, orderBook.toJsonString());
+    // PUB/SUB Redis
+    redisPubSub.publish(RedisChannelTopic.ORDER_BOOK_TRANSFORMATION_BASIC, orderBook.toJsonString());
+    //
     redisStreamSender.send(RedisStreamKey.ORDER_BOOK, orderBook.toJsonString());
     latch.countDown();
   }

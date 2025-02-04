@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.test.springboot.enums.RedisChannelTopic;
 
 @Component
-public class RedisPublisher {
+public class RedisPubSub {
 
   @Autowired
   private StringRedisTemplate stringRedisTemplate;

@@ -49,18 +49,18 @@ public class RabbitmqConfig {
     }
 
     @Bean
-    SimpleMessageListenerContainer container1(ConnectionFactory connectionFactory,
-            MessageListenerAdapter listenerAdapter) {
-        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-        container.setConnectionFactory(connectionFactory);
-        container.setQueueNames(RabbitmqQueue.ORDER_BOOK_BINANCE_ETH_USDT.getLabel(), RabbitmqQueue.ORDER_BOOK_BINANCE_SOL_USDT.getLabel());
-        container.setMessageListener(listenerAdapter);
-        return container; 
+    MessageListenerAdapter listenerAdapterOrderBook(RabbitmqReceiver receiver) {
+        return new MessageListenerAdapter(receiver, "receiveOrderBookMessage");
     }
 
     @Bean
-    MessageListenerAdapter listenerAdapter(RabbitmqReceiver receiver) {
-        return new MessageListenerAdapter(receiver, "receiveOrderBookMessage");
+    SimpleMessageListenerContainer container1(RabbitmqReceiver receiver, ConnectionFactory connectionFactory) {
+        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+        container.setConnectionFactory(connectionFactory);
+        container.setQueueNames(RabbitmqQueue.ORDER_BOOK_BINANCE_ETH_USDT.getLabel(), RabbitmqQueue.ORDER_BOOK_BINANCE_SOL_USDT.getLabel());
+        container.setMessageListener((listenerAdapterOrderBook(receiver)));
+        return container; 
     }
+
 
 }

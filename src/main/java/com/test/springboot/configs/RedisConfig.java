@@ -75,7 +75,7 @@ public class RedisConfig {
                 return container;
         }
 
-        // Stream Test
+        // Stream Listener
         @Bean
         RedisStreamOrderBookListener redisStreamOrderBookListenerHandler(){
                 return new RedisStreamOrderBookListener();
@@ -92,34 +92,5 @@ public class RedisConfig {
                 container.receive(StreamOffset.fromStart(RedisStreamOrderBookListener.STREAM_KEY), redisStreamOrderBookListenerHandler());
                 return container;
         }
-
-        /*
-         * @Bean
-         * public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory
-         * connectionFactory) {
-         * RedisTemplate<String, String> template = new RedisTemplate<>();
-         * template.setConnectionFactory(connectionFactory);
-         * return template;
-         * }
-         */
-
-        /*
-         * @Bean
-         * public LettuceConnectionFactory redisConnectionFactory() {
-         * return new LettuceConnectionFactory(new
-         * RedisSocketConfiguration("/var/run/redis.sock"));
-         * }
-         */
-
-        /*
-         * @Bean
-         * public RedisConnectionFactory redisConnectionFactory() {
-         * RedisSentinelConfiguration sentinelConfig = new RedisSentinelConfiguration()
-         * .master("mymaster")
-         * .sentinel("127.0.0.1", 26379)
-         * .sentinel("127.0.0.1", 26380);
-         * return new LettuceConnectionFactory(sentinelConfig);
-         * }
-         */
 
 }
